@@ -12,10 +12,10 @@ def happy_birthday(birthday_kids)
 end
 
 def age_appropriate_birthday(birthday_kids)
-  appropriate = birthday_kids.select {|name, age| age > 12 }
+  appropriate = birthday_kids.select {|name, age| age <= 12 }
     if birthday_kids.any?
-      puts "You are too old for this."
-    else
       puts "Happy Birthday #{name}! You are now #{age} years old!"
+    else
+      puts "You are too old for this."
     end
 end
